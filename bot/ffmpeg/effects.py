@@ -135,7 +135,7 @@ async def burn_subtitles(
         '-vf', subtitle_filter,
         '-c:v', 'libx264',
         '-crf', '23',
-        '-preset', 'medium',
+        '-preset', 'ultrafast',
         '-c:a', 'copy'
     ]
     
@@ -162,7 +162,7 @@ async def burn_embedded_subtitles(
         '-filter_complex', f"[0:v][0:s:{subtitle_index}]overlay",
         '-c:v', 'libx264',
         '-crf', '23',
-        '-preset', 'medium',
+        '-preset', 'ultrafast',
         '-c:a', 'copy'
     ]
     
