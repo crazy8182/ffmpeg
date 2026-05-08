@@ -23,5 +23,7 @@ RUN mkdir -p downloads outputs Thumbnails
 # Set permissions
 RUN chmod +x start.sh 2>/dev/null || true
 
+EXPOSE 8080
+
 # Run the bot
 CMD ["python3", "-m", "bot"]
