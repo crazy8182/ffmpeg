@@ -16,8 +16,8 @@ async def encode_video(
     output: str,
     video_codec: str = 'libx264',
     audio_codec: str = 'aac',
-    crf: int = 23,
-    preset: str = 'medium',
+    crf: int = 28,
+    preset: str = 'ultrafast',
     resolution: str = None,
     fps: int = None,
     audio_bitrate: str = '192k',
@@ -145,7 +145,7 @@ async def compress_video(
         cmd = [
             '-c:v', 'libx264',
             '-crf', str(crf),
-            '-preset', 'medium',
+            '-preset', 'ultrafast',
             '-c:a', 'aac',
             '-b:a', '128k'
         ]
