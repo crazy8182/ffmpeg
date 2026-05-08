@@ -134,7 +134,7 @@ async def burn_subtitles(
     cmd = [
         '-vf', subtitle_filter,
         '-c:v', 'libx264',
-        '-crf', '23',
+        '-crf', '28',
         '-preset', 'ultrafast',
         '-c:a', 'copy'
     ]
