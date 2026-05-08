@@ -146,6 +146,7 @@ async def compress_video(
             '-c:v', 'libx264',
             '-crf', str(crf),
             '-preset', 'ultrafast',
+            '-threads', '0',
             '-c:a', 'aac',
             '-b:a', '128k'
         ]
