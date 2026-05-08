@@ -38,7 +38,7 @@ async def encode_video(
     
     # Resolution
     if resolution and resolution != 'original':
-        cmd.extend(['-vf', f'scale={resolution}'])
+        cmd.extend(['-vf', f'scale={resolution}:flags=fast_bilinear'])
     
     # FPS
     if fps:
